@@ -52,3 +52,6 @@ MANAGER_HOMEDIR = os.path.join(os.sep, 'tmp', 'home')
 GCP_DEFAULT_CONFIG_PATH = os.path.join(MANAGER_HOMEDIR, 'gcp_config.json')
 
 RETRY_DEFAULT_DELAY = 30
+
+PREV_OPERATION = 'prev_operation'
+OPERATION_DONE = 'DONE'
