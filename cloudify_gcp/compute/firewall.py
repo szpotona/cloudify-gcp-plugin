@@ -149,8 +149,7 @@ class FirewallRule(GoogleCloudPlatform):
             'name': self.name,
             'description': 'Cloudify generated {}'.format(
                 'SG part' if self.security_group else 'FirewallRule'),
-            'network': 'projects/{0}/global/networks/{1}'.format(self.project,
-                                                                 self.network),
+            'network': utils.get_network(ctx),
             'allowed': [],
             'sourceTags': [],
             'sourceRanges': [],
