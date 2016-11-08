@@ -229,6 +229,7 @@ def get_gcp_config():
     gcp_config_from_properties = _get_gcp_config_from_properties()
     if gcp_config_from_properties:
         gcp_config = gcp_config_from_properties
+        ctx.logger.info('gcp_config gathered from properties: {}'.format(str(gcp_config)))
     else:
         try:
             with open(expanduser(constants.GCP_DEFAULT_CONFIG_PATH)) as f:
