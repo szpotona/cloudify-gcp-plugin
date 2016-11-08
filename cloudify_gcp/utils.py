@@ -441,7 +441,8 @@ def get_net_and_subnet(ctx):
                 'Unsupported target type for '
                 "'cloudify.gcp.relationships.instance_contained_in_network")
     else:
-        network = get_gcp_config()['network']
+        config = get_gcp_config()
+        network = 'projects/{0}/global/networks/{1}'.format(config['project'], config['network'])
 
     if network == 'default':
         network = 'global/networks/default'
